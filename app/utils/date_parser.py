@@ -11,5 +11,9 @@ class DateParse:
         except ValueError as err:
             raise HTTPException(
                 status_code=400,
-                detail=f"Invalid date format for '{date_str}'. Use DD/MM/YYYY.",
+                detail=(
+                    f"Invalid date format for '{
+                        date_str
+                    }'Please show date in the format of the chose DD/MM/YYYY."
+                ),
             ) from err
